@@ -1,3 +1,4 @@
+// Q- void pointer array -> int a; float b; struct N { int i; float j }
 #include<stdio.h>
 void main()
 {
