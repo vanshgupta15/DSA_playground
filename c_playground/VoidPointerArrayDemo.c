@@ -20,8 +20,8 @@ void main()
     arr[1]=&b;
     arr[2]=&n1;
 
-    printf("%d\n",*(int*)arr[0]);
-    printf("%0.2f\n",*(float*)arr[1]);
+    printf("Value of a : %d\n",*(int*)arr[0]);
+    printf("Value of b: %0.2f\n",*(float*)arr[1]);
     
     struct N *ptr = (struct N *)arr[2];
     printf("Struct i: %d\n", ptr->i);
