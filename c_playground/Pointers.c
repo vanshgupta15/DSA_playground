@@ -5,8 +5,8 @@ void main()
     int **p;
     int t;
 
-    t=10;
-    a=&t;
+    t=10; //initail value
+    a=&t; //address is represented by & 
     *a=t;
     p=&a;
 
