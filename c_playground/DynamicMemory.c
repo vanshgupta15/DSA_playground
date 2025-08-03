@@ -47,4 +47,11 @@ void main()
     {
         printf("New Value at %d position: %d\n",i,ptr[i]);
     }
+
+    //free
+    free(ptr);
+    for(int i=0; i<n; i++)
+    {
+        printf("New Value at %d position: %d\n",i,ptr[i]);
+    }
 }
