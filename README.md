@@ -58,14 +58,13 @@ Editor and workspace configuration files for VS Code.
 Feel free to explore the folders and files.  
 If you're also learning DSA in C, you might find these implementations helpful!
 
-> Clone the repo:
-```bash
-git clone https://github.com/vanshgupta15/DSA_playground.git
-
 ## 🔗 Stay Connected
 
 🔹 [GitHub Profile](https://github.com/vanshgupta15)  
 🔹 [LinkedIn](https://www.linkedin.com)((https://www.linkedin.com/in/vanshgupta1512/))
 🔹 Happy to collaborate or help beginners!
 
----
+> Clone the repo:
+```bash
+git clone https://github.com/vanshgupta15/DSA_playground.git
+
