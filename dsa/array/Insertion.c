@@ -11,22 +11,21 @@ void display(int arr[], int size)
 
 int insert(int A[], int size, int new, int index)
 {
-    // Shift elements to the right
-    for(int i = size - 1; i >= index; i--)
+    for(int i = size-1 ; i >= index; i--)
     {
         A[i + 1] = A[i];
     }
     A[index] = new;
-    return 0;  // Success
+    return 0; 
 }
 
 void main()
 {
-    int A[100] = {1, 8, 6, 47, 53, 98};  // Reserve extra space
-    int size = 6;  // Actual number of elements
+    int arr[10] = {1, 8, 6, 47, 53, 98}; 
+    int size = sizeof(arr) / sizeof(arr[0]);
 
     printf("Old array : ");
-    display(A, size);
+    display(arr, size);
 
     int new, index;
     printf("Enter the new element : ");
@@ -36,12 +35,12 @@ void main()
 
     if(index >= 0 && index <= size)
     {
-        int result = insert(A, size, new, index);
+        int result = insert(arr, size, new, index);
         if(result == 0)
         {
-            size++;  // Update size after insertion
+            size++;  
             printf("Successfully inserted. New array:\n");
-            display(A, size);
+            display(arr, size);
         }
         else
         {
@@ -52,4 +51,4 @@ void main()
     {
         printf("FAILED: Invalid index\n");
     }
-}
+} 
