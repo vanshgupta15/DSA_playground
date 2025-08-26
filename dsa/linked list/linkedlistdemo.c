@@ -7,6 +7,16 @@ struct node
     struct node *next;
 };
 
+void printing(struct node *ptr)
+{
+    while(ptr!=NULL)
+    {
+        printf("%d->",ptr->data);
+        ptr= ptr->next;
+    }
+    printf("NULL");
+}
+
 void main()
 {
     //declaring the nodes
@@ -29,5 +39,5 @@ void main()
     third->data=30;
     third->next=NULL;
     
-    
+    printing(head);
 }
