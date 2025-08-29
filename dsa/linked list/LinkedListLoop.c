@@ -6,12 +6,12 @@ struct node
     struct node *next;
 };
 
-void printing(struct node *ptr)
+void display(struct node *ptr)
 {
     while(ptr!=NULL)
     {
         printf("%d->",ptr->data);
-        ptr= ptr->next;
+        ptr=ptr->next;
     }
     printf("NULL");
 }
@@ -41,16 +41,5 @@ void main()
             current=newNode;
         }
     }
-
-    //insertion at beginning
-    struct node *temp= (struct node*)malloc(sizeof(struct node));
-    temp=head;
-    struct node *addedNode= malloc(sizeof(struct node));
-    int newData;
-    printf("Enter data for new node:");
-    scanf("%d",&newData);
-    addedNode->data=newData;
-    addedNode->next=temp;
-    head=addedNode;
-    printing(head);
+    display(head);
 }
