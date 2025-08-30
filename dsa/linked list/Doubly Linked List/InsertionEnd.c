@@ -10,12 +10,14 @@ struct node
 void insertionEnd(struct node *ptr, int data)
 {
     struct node *temp= malloc(sizeof(struct node));
-    temp=ptr;
-    ptr->prev=NULL;
-    ptr->next=temp;
-    ptr->data=data;
+    temp->data=data;
+    temp->next=NULL;
+    while(ptr->next!=NULL)
+    {
+        ptr=ptr->next;
+    }
     temp->prev=ptr;
-    return ptr;
+    ptr->next=temp;
 }
 
 void display(struct node *ptr)
