@@ -8,27 +8,27 @@ struct stack
     struct stack *arr;
 };
 
-int isEmpty(struct stack *ptr)
+void isEmpty(struct stack *ptr)
 {
     if (ptr->top == -1)
     {
-        return 1;
+        printf("Stack is empty\n");
     }
     else
     {
-        return 0;
+        printf("Stack is not empty\n");
     }
 }
 
-int isFull(struct stack *ptr)
+void isFull(struct stack *ptr)
 {
     if (ptr->top == ptr->size - 1)
     {
-        return 1;
+        printf("Stack is full\n");
     }
     else
     {
-        return 0;
+        printf("Stack is not full\n");
     }
 }
 
@@ -38,4 +38,7 @@ void main()
     s->size = 80;
     s->top = -1;
     s->arr = malloc(s->size * sizeof(int));
+
+    isEmpty(s);
+    isFull(s);
 }
