@@ -5,7 +5,7 @@ struct stack
 {
     int size;
     int top;
-    struct stack *arr;
+    int *arr;
 };
 
 void isEmpty(struct stack *ptr)
@@ -37,7 +37,7 @@ void main()
     struct stack *s;
     s->size = 80;
     s->top = -1;
-    s->arr = malloc(s->size * sizeof(int));
+    s->arr = (int *)malloc(s->size * sizeof(int));
 
     isEmpty(s);
     isFull(s);
