@@ -58,6 +58,24 @@ void pop(struct stack *ptr)
     }    
 }
 
+void display(struct stack *ptr)
+{
+    if(isEmpty(ptr))
+    {
+        printf("Stack is empty!\n");
+    }
+    else
+    {
+        printf("Stack elements (top to bottom):\n");
+        printf(" ---\n");
+        for(int i = ptr->top; i >= 0; i--)
+        {
+            printf("|%d|\n", ptr->arr[i]);
+            printf(" ---\n");
+        }
+    }
+}
+
 void main()
 {
     struct stack *s=(struct stack*)malloc(sizeof(struct stack));
@@ -69,7 +87,7 @@ void main()
     while(i==1)
     {
         int choice;
-        printf("Choose a option:\n1. Push\n2. Pop\n3. Exit\n");
+        printf("Choose a option:\n1. Push\n2. Pop\n3. Display\n4. Exit\n");
         scanf("%d",&choice);
         switch(choice)
         {
@@ -87,6 +105,11 @@ void main()
                 break;
             }
             case 3:
+            {
+                display(s);
+                break;
+            }
+            case 4:
             {
                 i=0;
             }
