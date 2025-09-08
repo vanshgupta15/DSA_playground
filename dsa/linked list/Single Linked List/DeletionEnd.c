@@ -18,14 +18,12 @@ void printing(struct node *ptr)
 
 void deletion(struct node *ptr)
 {
-    struct node *temp;
     while(ptr->next->next!=NULL)
     {
         ptr=ptr->next;
     }
-    temp=ptr;
     free(ptr->next);
-    temp->next=NULL;
+    ptr->next=NULL;
 }
 void main()
 {
