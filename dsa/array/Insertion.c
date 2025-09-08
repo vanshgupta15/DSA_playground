@@ -9,13 +9,13 @@ void display(int arr[], int size)
     printf("\n");
 }
 
-int insert(int A[], int size, int new, int index)
+int insert(int A[], int size, int newData, int index)
 {
     for(int i = size-1 ; i >= index; i--)
     {
         A[i + 1] = A[i];
     }
-    A[index] = new;
+    A[index] = newData;
     return 0; 
 }
 
@@ -27,15 +27,15 @@ void main()
     printf("Old array : ");
     display(arr, size);
 
-    int new, index;
-    printf("Enter the new element : ");
-    scanf("%d", &new);
+    int newData, index;
+    printf("Enter the newData element : ");
+    scanf("%d", &newData);
     printf("Enter the index : ");
     scanf("%d", &index);
 
     if(index >= 0 && index <= size)
     {
-        int result = insert(arr, size, new, index);
+        int result = insert(arr, size, newData, index);
         if(result == 0)
         {
             size++;  
