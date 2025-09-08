@@ -13,8 +13,8 @@ void insertion(struct node* ptr, int data, int pos)
     {
         ptr=ptr->next;
     }
-    newNode->next=ptr->next;
     newNode->data=data;
+    newNode->next=ptr->next;
     ptr->next=newNode;
 }
 
