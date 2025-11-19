@@ -1,23 +1,5 @@
 #include<stdio.h>
 
-void main() 
-{
-    int n;
-    printf("Enter number of elements: ");
-    scanf("%d", &n);
-    int arr[n];
-    printf("Enter %d elements:\n", n);
-    for (int i=0; i<n; i++) {
-        scanf("%d", &arr[i]);
-    }
-    bubbleSort(arr, n);
-    printf("Sorted array: ");
-    for (int i=0; i<n; i++) 
-    {
-        printf("%d ", arr[i]);
-    }
-}
-
 void bubbleSort(int arr[], int n) 
 {
     int i, j,temp;
@@ -39,5 +21,23 @@ void bubbleSort(int arr[], int n)
         {
             break;
         }
+    }
+}
+
+void main() 
+{
+    int n;
+    printf("Enter number of elements: ");
+    scanf("%d", &n);
+    int arr[n];
+    printf("Enter %d elements:\n", n);
+    for (int i=0; i<n; i++) {
+        scanf("%d", &arr[i]);
+    }
+    bubbleSort(arr, n);
+    printf("Sorted array: ");
+    for (int i=0; i<n; i++) 
+    {
+        printf("%d ", arr[i]);
     }
 }
